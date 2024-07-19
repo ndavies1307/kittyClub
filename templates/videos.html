@@ -2,15 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Videos</title>
 </head>
 <body>
+    <h1>Videos tagged with '{{ video_tags }}'</h1>
     <ul>
-        {% for x in index %}
-        <li><a href="details/{{ x.uu_id}}">{{ x.title }} {{ x.tag }} {{ x.description }}</a></li>
+        {% for video in cat_videos %}
+        <li>
+            {{ video.title }} - {{ video.description }}<br>
+            <img src="{{ video.image_card.url }}" alt="{{ video.title }} card image"><br>
+            <img src="{{ video.image_cover.url }}" alt="{{ video.title }} cover image">
+        </li>
+        {% empty %}
+        <li>No videos found with the tag '{{ video_tags }}'.</li>
         {% endfor %}
     </ul>
-
-
 </body>
 </html>
