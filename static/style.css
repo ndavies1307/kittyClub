@@ -12,6 +12,7 @@ p {
 
 header {
     background-color: cadetblue;
+    padding: 10px;
 }
 
 /* Optional: Custom styles for navigation */
@@ -39,3 +40,15 @@ header {
     background-color: pink; /* Light background color on hover */
     color: black; /* Change text color on hover */
 }
+
+.img-style-thumbnail {
+          border: 1px solid #ddd;
+          border-radius: 4px;
+          padding: 5px;
+          width: 150px;
+        }
+
+.title-ul {
+  list-style-type: none;
+}
+

@@ -10,18 +10,36 @@
 </head>
 <body>
 
- <header class="p-5 flex justify-between items-center">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png" height="30" alt="Netflix Logo" width="110">
-        
-        
-        <nav class="flex space-x-5">
-          
-            <span><button class="nav-link active rounded-5" id="home-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="true"><a href='/'>Home</a></button></span>
-          
-              
-          
-        </nav>
-    </header>
+ <header class="p-5 d-flex justify-content-between align-items-center">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png" height="80" alt="Netflix Logo" style="width: 100%; ">
+    </header>   
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" >
+        <div class="container-fluid">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Profiles
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="/Shane/">Shane</a></li>
+                        <li><a class="dropdown-item" href="/Reggie/">Reggie</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact/">Contact</a>
+                </li>
+            </ul>
+            <form class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </form>
+            
+            
+        </div>
+    </nav>
     
     <h1> Shane</h1>
     {% lorem %}
