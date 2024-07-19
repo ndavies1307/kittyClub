@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Cat
 import uuid
 
@@ -49,4 +49,15 @@ def details(request, pk):
     return render(request, 'videos.html', context)
 
 
+def search(request):
+    if request.method == 'POST':
+        search_term = request.POST['search_term']
+        cat_videos = Cat.objects.filter(tags__icontains=search_term)
 
+        context = {
+            'cat_videos': cat_videos,
+            'search_term': search_term,
+        }
+        return render(request, 'search.html', context)
+    else:
+        return redirect('/')
