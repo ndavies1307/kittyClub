@@ -5,4 +5,7 @@ from .models import Cat
 def index(request):
     return admin
 
-admin.site.register(Cat)
+class CatAdmin(admin.ModelAdmin):
+    list_display = ('title', 'tags')
+
+admin.site.register(Cat, CatAdmin)
