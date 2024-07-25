@@ -11,6 +11,7 @@ urlpatterns = [
     path('', views.index, name='Home'),
     path('videos/<str:pk>/', views.details, name='details'),
     path('search/', views.search, name='search'),
+    path('about/', views.about, name='about'),
 
 ]
 

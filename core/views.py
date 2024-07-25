@@ -15,6 +15,9 @@ def index(request):
 
     return render(request, 'index.html', context)
 
+def about(request):
+    return render(request, 'about.html')
+
 def shane(request):
     shane_videos = Cat.objects.filter(tags='Shane')
     shane_feature = shane_videos.last() if shane_videos.count() > 0 else None

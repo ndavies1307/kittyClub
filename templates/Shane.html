@@ -7,12 +7,20 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" type="text/css" href="/static/style.css" />
     <title>Shane</title>
+    
+    <style> h1   {color: white;}
+            p    {color: white;}
+            
+            
+    </style>
+    
 </head>
 <body>
 
  <header class="p-5 d-flex justify-content-between align-items-center">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png" height="80" alt="Netflix Logo" style="width: 100%; ">
-    </header>   
+        {%  comment %}<img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png" height="80" alt="Netflix Logo" style="width: 100%; "> {%  endcomment %}
+        <img src="https://static.wixstatic.com/media/9c18f4_c5919915b3de40aeb9e5d21ee381daaf~mv2.png/v1/crop/x_314,y_423,w_1424,h_653/fill/w_148,h_68,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/catflix.png" alt="catflix.png" style="width:118px;height:54px;object-fit:cover" width="118" height="54" >
+    </header> 
     <nav class="navbar navbar-expand-lg navbar-light bg-light" >
         <div class="container-fluid">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -29,7 +37,7 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/contact/">Contact</a>
+                    <a class="nav-link" href="/about/">About Us</a>
                 </li>
             </ul>
             <form class="form-inline" action="{% url 'search' %}" method="POST">
@@ -42,9 +50,11 @@
         </div>
     </nav>
     
-    <h1> Shane</h1>
-    {% lorem %}
-
+    <div class="container-fluid">
+        <br>
+        <h1> Shane</h1>
+        {% lorem %}
+    </div>
 </body>
 
 </html>
